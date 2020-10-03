@@ -3,45 +3,62 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="row"></div>
     <div>
-        <form name="form">
-            <!-- ======== Campos Hidden ======== -->
-            <input type="hidden" name="atividade" id="atividade" name="atividade">
+        <div class="col-md-12">
 
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fluigicon fluigicon-folder-open icon-sm"></i> Dados</h3>
-                    </div>
-                    <div class="panel-body">
+            <div class="panel panel-primary">
+                <div class="panel-heading font-color">
+                    <h3 class="panel-title font-color"> Dados</h3>
+                </div>
+                <div class="panel-body">
 
-                        <div class="row">
+                    <div class="row">
 
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="server_address">Endereço Servidor</label>
-                                    <input type="text" class="form-control" id="server_address" name="server_address">
-                                </div>
+
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="server_address" class="font-color">Endereço Servidor</label>
+                                <input type="text" class="form-control" id="server_address" name="server_address" onchange="fillUrl()">
                             </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="server_url">Url servidor</label>
-                                    <input type="text" class="form-control" id="server_url" name="server_url">
-                                </div>
-                            </div>
+                        </div>
 
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="endpoint" class="font-color">Endpoint</label>
+                                <select id="endpoint" class="form-control" onchange="changeEndPoint()">
+                                    <option value="">Selecione</option>
+                                    <option value="datasetSearch">Consulta Dataset</option>
+                                    <option value="loginWcmAdmin">Login WCMadmin</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="font-color result">Resultado</label>
+                                <!-- <div class="form-group">
+                                <label for="server_url" class="font-color">Resultado</label>
+                                <input type="text" class="form-control" id="result" name="result">
+                            </div> -->
+                                <p></p>
+                                <a id="result" name="result" target="_blank" rel="noopener noreferrer" class="font-color"></a>
+                            </div>
                         </div>
 
                     </div>
+
                 </div>
             </div>
+        </div>
 
-        </form>
+
     </div>
 </body>
 
