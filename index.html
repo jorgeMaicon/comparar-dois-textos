@@ -1,5 +1,5 @@
 <html>
-<title>Atalhos Urls Fluig - By jorgeMaicon</title>
+<title>Comparar Dois Textos</title>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,45 +16,44 @@
         <div class="col-md-12">
 
             <div class="panel panel-primary">
-                <div class="panel-heading panel-body-color">
-                    <h3 class="panel-title font-color"> Atalhos de endpoints para seu servidor Fluig</h3>
+                <div class="panel-heading justify-content-center panel-body-color">
+                    <h3 style="text-align: center;" class="panel-title  font-color">Comparar Igualdade Entre Dois Textos</h3>
                 </div>
                 <div class="panel-body">
 
                     <div class="row">
 
 
+                    <div class="col-md-12">
+                       <div class="form-group">
+                            <label for="texto1" style="color: white; ">Texto 1</label>
+                            <textarea class="form-control" id="texto1" rows="4"></textarea>
+                        </div>
+                    </div>
 
-                        <div class="col-md-3">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="texto2" style="color: white;">Texto 2</label>
+                            <textarea class="form-control" id="texto2" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <label for="server_address" class="font-color">Endereço Servidor</label>
-                                <input type="text" class="form-control" id="server_address" name="server_address" onchange="fillUrl()">
+                                <button onclick="Javascript:compare(this)" class="btn btn-primary form-control">COMPARAR</button>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="" style="color: white; font-size: smaller;">*Leva-se em consideração maíusculas e minúsculas. EX: "TEXTO" é diferente de "texto".</p>
                             </div>
                         </div>
-
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="endpoint" class="font-color">Endpoint</label>
-                                <select id="endpoint" class="form-control" onchange="changeEndPoint()">
-                                    <option value="">Selecione</option>
-                                    <option value="datasetSearch">Consulta Dataset</option>
-                                    <option value="loginWcmAdmin">Login WCMadmin</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="font-color result">Resultado</label>
-                                <!-- <div class="form-group">
-                                <label for="server_url" class="font-color">Resultado</label>
-                                <input type="text" class="form-control" id="result" name="result">
-                            </div> -->
-                                <p></p>
-                                <a id="result" name="result" target="_blank" rel="noopener noreferrer" class="font-color"></a>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>

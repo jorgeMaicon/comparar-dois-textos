@@ -1,4 +1,4 @@
-function fillUrl() {
+/* function fillUrl() {
 
     //get the server address
     var x = document.getElementById("server_address").value;
@@ -41,4 +41,15 @@ function getUrls(server, property) {
 
     var result = urls[property];
     return result
+} */
+
+function compare(){
+    var texto1 = document.getElementById("texto1").value;
+    var texto2 = document.getElementById("texto2").value;
+
+    if(texto1 == texto2){
+        alert("TEXTOS IGUAIS");
+    }else{
+        alert("TEXTOS DIFERENTES");
+    }
 }
