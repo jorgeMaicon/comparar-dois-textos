@@ -1,1 +1,1 @@
-# fluig-urls-shortcut
+# Comparador de textos que facilita identificar se dois textos são iguais.
